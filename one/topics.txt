@@ -1,0 +1,33 @@
+//  word vs keyword
+// variable
+// hoisting
+//reference value
+// primitive values 
+// conditionals
+// loop while and for loop
+// functions
+// parameters
+// arguments
+// arrays
+// push pop shift unshift 
+// objects
+// var let cost
+// window object
+// browser context api
+// stack
+// heap memory
+// exicutional context
+// lexical environment
+// how to copy reference value
+// spread operator
+// truthy vs falsy
+// for each loop
+// for in loop
+// call back function
+// first class functions
+// how array made behind the scene
+// how we can make negative index array in js
+// delete object property
+// higher order function
+// consructor function
+// new keyword
