@@ -145,3 +145,5 @@ Count of 2: 3 */
 //     newr.push(val + ind)
 // })
 // console.log(newr)
+
+console.log(hello)
