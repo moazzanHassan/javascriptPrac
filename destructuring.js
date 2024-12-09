@@ -55,3 +55,8 @@ const {
 } = product
 
 console.log(name,brand,discount)
+
+const products = ["hello","two"]
+
+const  [one,two] = products
+console.log(one,two)
