@@ -60,3 +60,5 @@ const products = ["hello","two"]
 
 const  [one,two] = products
 console.log(one,two)
+
+console.log("hello world")
