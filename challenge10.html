@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge 10</title>
+</head>
+<body>
+    <h1>javascript challenges</h1>
+    <h2>challenge 10</h2>
+
+    <script>
+        // function hello(name){
+        //     console.log(`hello how are you ${name}`)
+        // }
+        // hello()
+        // hello("moazzan")
+        // hello("zafar")
+
+       var name = prompt("Hello, what is your name?", "");
+       var arr = ["bnana","orange","grapes"]
+    //    console.log(random)
+
+var greeting = function (person) {
+
+    if (person === null || person.trim() === "") {
+        return"You didn't give me a name.";
+    } else {
+        return`Hello, Mr. ${person.trim()}`;
+    }
+}
+
+// console.log (greeting(name));
+// var greeting = function(){
+//     var greating = "hello how are you";
+//     return greating
+// }
+
+// console.log(greeting())
+function hospitality(nam,gift){
+    var random = Math.floor(Math.random()*(arr.length))
+
+console.log(greeting(nam));
+
+    console.log(`${nam} would you like some ${gift[random]}`)
+
+
+
+    
+
+}
+
+hospitality(name,arr)
+
+    </script>
+</body>
+</html>

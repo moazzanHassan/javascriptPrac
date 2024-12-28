@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div id="special">
+        <p class="wow">remove me</p>
+        <p>hello this is a paragraph</p>
+        <p class="wow">hello this is a paragraph</p>
+    </div>
+
+    <script>
+        // function addPara() {
+        //     var main = document.querySelector("#special");
+        //     if (main) {
+        //         var newpar = document.createElement('h1');
+        //         var string = document.createTextNode("hello this is a h1");
+        //         newpar.appendChild(string);
+        //         main.appendChild(newpar);
+        //     } else {
+        //         console.error("Element with id 'special' not found!");
+        //     }
+        // }
+
+        // addPara();
+        var min = document.querySelector("#special");
+        min.removeChild(min.children[0])
+    </script>
+</body>
+</html>

@@ -39,3 +39,4 @@ for(var i = 0; i < food.length;i++){
 
     }
 }
+
