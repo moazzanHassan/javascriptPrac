@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit data and event listener and event obj</title>
+</head>
+<body>
+
+    <form method="get">
+        <label > Name : <input type="text">
+        <button type="submit">submit</button>
+        </label>
+    </form>
+    
+
+    <script>
+        var form = document.querySelector("form");
+        form.addEventListener("submit",function(e){
+                e.preventDefault();
+                var formdata = document.querySelector("input").value;
+                console.log(formdata)
+
+                alert(formdata)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseoverNmouseout</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Roll your mouse over the Boxes</h1>
+<div>
+</div>
+
+<script>
+    var heading = document.querySelector("h1");
+    var div = document.querySelector("div");
+
+    div.addEventListener("mouseover",function(){
+        heading.innerHTML = "the mouse is over the box"
+    })
+    
+    div.addEventListener("mouseout",function(){
+        heading.innerHTML = "the mouse have left the box"
+    })
+    heading.addEventListener("mouseover",function(){
+        heading.innerHTML = "Roll your mouse over the Boxes"
+    })
+</script>
+</body>
+</html>
