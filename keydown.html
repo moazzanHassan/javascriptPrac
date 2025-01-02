@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keydown event</title>
+</head>
+<body>
+    <h1>this page is about keydown event</h1>
+    <h1 id="let">hi</h1>
+
+    <script>
+        document.addEventListener("keydown",function(evn){
+            var text = document.querySelector("#let");
+           var letter =  evn.key;
+           text.innerHTML = letter
+           
+        })
+    </script>
+</body>
+</html>

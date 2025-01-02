@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize</title>
+</head>
+<body>
+    <h1>hello</h1>
+    
+<script>
+
+    window.addEventListener("resize",function(){
+        var h1 = document.querySelector("h1");
+        if(window.innerWidth <= 500){
+            h1.style.color = "green"
+            h1.style.fontSize = "10vw"
+        }else{
+            h1.style.color = "black"
+            h1.style.fontSize = "25px"
+
+        }
+    })
+</script>
+</body>
+</html>
