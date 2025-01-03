@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge 22 to 30</title>
+</head>
+<body>
+    <!-- <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odit obcaecati facere! Eum deleniti necessitatibus, cupiditate molestiae repellat doloribus fuga.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, accusamus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, accusamus.</p>
+    <button>turn all of them green</button> -->
+    <div>
+
+    </div>
+    <button>click</button>
+    <button id="btn2">delete</button>
+
+    <script>
+        // var para = document.querySelectorAll("p");
+        // var btn = document.querySelector('button')
+
+        // btn.addEventListener("click",function(){
+        //     para.style.color = "green";
+        // })
+        var btn = document.querySelector("button");
+        var btn2 = document.querySelector("#btn2");
+        var div = document.querySelector("div")
+        var parNo = 1;
+        btn.addEventListener("click",function(){
+                var para = document.createElement("p");
+                var str = document.createTextNode(`This is paragraph no ${parNo}`);
+                para.appendChild(str)
+                div.appendChild(para)
+                parNo++
+                
+        })
+        btn2.addEventListener("click",function(){
+            alert("going to remove the last paragraph")
+            div.removeChild(div.lastChild)
+        })
+
+
+
+    </script>
+</body>
+</html>

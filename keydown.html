@@ -8,6 +8,7 @@
 <body>
     <h1>this page is about keydown event</h1>
     <h1 id="let">hi</h1>
+    <button>colorchange</button>
 
     <script>
         document.addEventListener("keydown",function(evn){
@@ -16,6 +17,16 @@
            text.innerHTML = letter
            
         })
+        const btn = document.querySelector("button");
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+btn.addEventListener("click", () => {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+});
     </script>
 </body>
 </html>
