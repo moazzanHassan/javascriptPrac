@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeBodyColorOnScroll</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .one{
+            background-color: beige;
+            transition: all 3s;
+        }
+        .two{
+            background-color: blueviolet;
+            transition: all 3s;
+        }
+        .three{
+            background-color: coral;
+            transition: all 3s;
+        }
+        .four{
+            background-color: rgb(100, 237, 159);
+            transition: all 3s;
+        }
+        .five{
+            background-color: darkgoldenrod;
+            transition: all 3s;
+        }
+        
+    </style>
+</head>
+<body class="one">
+    
+
+
+
+
+    <script>
+        // var body = document.querySelector("body");
+    
+        // window.addEventListener("scroll", function () {
+        //     var ofy = window.scrollY; // Get the vertical scroll offset
+        //     console.log("Vertical Offset (scrollY):", ofy);
+    
+        //     if (ofy >= 500 && ofy < 1000) {
+        //         body.className = "two"; // Apply "two" between 500px and 1000px
+        //     } else if (ofy >= 1000 && ofy < 2000) {
+        //         body.className = "three"; // Apply "three" between 1000px and 2000px
+        //     } else if (ofy >= 2000 && ofy < 2500) {
+        //         body.className = "four"; // Apply "four" between 2000px and 2500px
+        //     } else if (ofy >= 2500 && ofy <= 3000) {
+        //         body.className = "five"; // Apply "five" between 2500px and 3000px
+        //     } else {
+        //         body.className = "one"; // Reset to "one" when not in range
+        //     }
+        // });
+        var body = document.querySelector("body");
+
+// Add keydown event listener
+document.addEventListener("keydown", function (evt) {
+    var keypress = evt.key; // Get the key pressed
+    console.log("Key pressed:", keypress); // Log the key for debugging
+
+    switch (keypress) {
+        case "b": // When "b" is pressed
+            body.className = "two";
+            break;
+        case "c": // When "c" is pressed
+            body.className = "three";
+            break;
+        case "d": // When "d" is pressed
+            body.className = "four";
+            break;
+        case "e": // When "e" is pressed
+            body.className = "five";
+            break;
+        default: // Any other key resets the class
+            body.className = "one";
+    }
+});
+
+    </script>
+</body>
+</html>
