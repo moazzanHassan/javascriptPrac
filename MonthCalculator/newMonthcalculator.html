@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month Calculator</title>
+    <style>
+        body{
+            margin-left: 10%;
+        }
+        #calculateBtn:hover{
+                cursor: pointer;
+        }
+        #calculateBtn{
+            background-color: green; padding: 10px 20px; border-radius: 20px; color: white;
+        }
+        @media (max-width:500px) {
+            #calculateBtn{
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Month Calculator</h1>
+    <p>Enter a past month and year to calculate the number of months until the end of January 2025:</p>
+    <label for="monthInput">Month: </label>
+    <select id="monthInput">
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+        <option value="4">5</option>
+        <option value="5">6</option>
+        <option value="6">7</option>
+        <option value="7">8</option>
+        <option value="8">9</option>
+        <option value="9">10</option>
+        <option value="10">11</option>
+        <option value="11">12</option>
+    </select>
+    <label for="yearInput">Year: </label>
+    <input type="number" id="yearInput" placeholder="e.g., 2020" min="1900" max="2025">
+    <button id="calculateBtn">Calculate Months</button>
+    <p id="result" style="font-size: 30px;"></p>
+
+    <script>
+        document.getElementById("calculateBtn").addEventListener("click", function () {
+            const monthInput = parseInt(document.getElementById("monthInput").value, 10);
+            const yearInput = parseInt(document.getElementById("yearInput").value, 10);
+            const resultElement = document.getElementById("result");
+
+            if (isNaN(yearInput) || yearInput < 1900 || yearInput > 2025) {
+                resultElement.textContent = "Please enter a valid year between 1900 and 2025.";
+                return;
+            }
+
+            const pastDate = new Date(yearInput, monthInput, 1); // Create a date with the input month and year
+            const targetDate = new Date("2025-02-01"); // Include all of January 2025
+
+            if (pastDate > targetDate) {
+                resultElement.textContent = "The selected date is after January 2025. Please select an earlier date.";
+                return;
+            }
+
+            const yearsDifference = targetDate.getFullYear() - pastDate.getFullYear();
+            const monthsDifference = targetDate.getMonth() - pastDate.getMonth();
+
+            // Total months from the given date to January 2025
+            const totalMonths = yearsDifference * 12 + monthsDifference;
+
+            resultElement.textContent = ` ${totalMonths} =ٹوٹل مہینے  `;
+        });
+    </script>
+</body>
+</html>
